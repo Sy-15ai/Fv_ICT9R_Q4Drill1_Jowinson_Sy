@@ -26,12 +26,6 @@
     </style>
 </head>
 <body>
-    
-                    
-                </form>
-            </div>
-        </div>
-    </nav>
 
     <br><br>
 
@@ -58,10 +52,37 @@
                         <h2>Password</h2>
                         <input class="form-control" type="text" name="last-name" id="last-name" placeholder="********" required>
                     </div>
-                <div class="d-grid">
-                <button class="btn btn-info  mt-3">Submit</button>
+                  <script>
+
+                    function CheckPassandUser(){
+                        var Pass= documentgetElementById("Pass").value;
+                        var user= documentgetElementById("user").value;
+
+
+                        if ((Pass === "" || user ==="") || (Pass < 0) || (user > 0 )|| (Pass > 0) || (user>0)){
+                            alert("Please enter correct username and password")
+                        }
+                    }
+                  </script>
+                    
+                <div>
+                    <label>
+                        <input type="radio" id="Stay logged in" name="mode" value="Stay logged in" required> Stay logged in
+                    </label>
+                    
+                </div>
+        <div class="d-grid">
+                <button class="btn btn-info  mt-3">Login</button>
             </div>
             </form>
+   <div class="d-grid">
+                <button class="btn btn-info  mt-3">Cancel</button>
+            </div>
+            </form>
+
+            <p>
+  <a href="#">Forgot Username/Password?</a>
+</p>
 
 </body>
 </html>
